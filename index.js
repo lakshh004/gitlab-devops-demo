@@ -57,4 +57,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(3000);
+throw new Error("Intentional crash for rollback test");
