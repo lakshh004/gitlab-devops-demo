@@ -12,7 +12,7 @@
 
 This project demonstrates a production-style CI/CD pipeline built entirely on AWS free tier. Every push to `main` automatically builds a Docker image on a self-hosted GitLab Runner, deploys it to EC2, runs a health check, and rolls back to the previous version if the deployment fails.
 
-The entire setup runs on a single **t3.micro EC2 instance** — no managed services, no extra cost. The same machine runs the GitLab Runner and hosts the live application.
+The entire setup runs on a single **t3.micro EC2 instance** - no managed services, no extra cost. The same machine runs the GitLab Runner and hosts the live application.
 
 The pipeline handles:
 
@@ -32,7 +32,6 @@ gitlab-devops-demo/
 ├── index.js              # Node.js app with / and /health endpoints
 ├── Dockerfile            # Container definition
 ├── .gitlab-ci.yml        # Pipeline stages: build → deploy
-├── screenshots/          # Proof screenshots
 └── README.md             # Project documentation
 ```
 
@@ -40,7 +39,9 @@ gitlab-devops-demo/
 
 ## Architecture Diagram
 
-![Architecture](screenshots/architecture.png)
+<img width="1157" height="266" alt="architecture diagram" src="https://github.com/user-attachments/assets/5b6d9083-4960-41e9-bf73-207c90b24106" />
+<p style="text-align: center;">Architecture Diagram</p>
+
 
 ---
 
@@ -141,45 +142,51 @@ docker run -d -p 80:3000 --name myapp myapp:<commit-sha>
 
 ## Project Screenshots
 
-![Build Pipeline](screenshots/build%20pipeline.png)
+<img width="1167" height="679" alt="build pipeline" src="https://github.com/user-attachments/assets/371f987e-9673-47e2-aa4c-de446f1969cb" />
 
-GitLab pipeline passing — build and deploy stages both green.
+<p style="text-align: center;">GitLab pipeline passing - build and deploy stages both green.</p>
 
-&nbsp;
-
-![App v1](screenshots/start%20page%20v1.png)
-
-Live app in browser — version 1.
 
 &nbsp;
 
-![App v2](screenshots/start%20page%20v2.png)
+<img width="1470" height="571" alt="start page v1" src="https://github.com/user-attachments/assets/ce9992d2-4a47-4a4a-a200-016e66566e6d" />
 
-Live app after redeployment — version 2, no downtime.
+<p style="text-align: center;">Live app in browser - version 1.</p>
 
-&nbsp;
-
-![Health Check](screenshots/health%20status.png)
-
-`/health` endpoint returning `{"status":"healthy"}`.
 
 &nbsp;
 
-![Auto Rollback](screenshots/auto%20rollback.png)
+<img width="1470" height="718" alt="start page v2" src="https://github.com/user-attachments/assets/e7f1fd84-525c-46b3-a26b-314635b4ef78" />
 
-Pipeline log showing automatic rollback after intentional crash — health check failure detected, previous image restored.
+<p style="text-align: center;">Live app after redeployment — version 2, no downtime.</p>
 
-&nbsp;
-
-![Rollback Terminal](screenshots/rollback%20command%20terminal.png)
-
-Manual rollback via `docker images` and commit SHA.
 
 &nbsp;
 
-![CloudWatch Alarm](screenshots/alarm.png)
+<img width="1467" height="443" alt="health status" src="https://github.com/user-attachments/assets/99bfa12e-600e-4b78-944a-9f6bdd637d18" />
 
-CloudWatch CPU alarm active at 70% threshold with SNS notification configured.
+<p style="text-align: center;">`/health` endpoint returning `{"status":"healthy"}`.</p>
+
+&nbsp;
+
+<img width="1153" height="628" alt="auto rollback" src="https://github.com/user-attachments/assets/eb7fbe62-96e0-491d-bb3c-4325d764396e" />
+
+<p style="text-align: center;">Pipeline log showing automatic rollback after intentional crash — health check failure detected, previous image restored.
+</p>
+
+&nbsp;
+
+<img width="511" height="176" alt="rollback command terminal" src="https://github.com/user-attachments/assets/60e35b41-063b-4217-af96-7d8643948f36" />
+
+<p style="text-align: center;">Manual rollback via `docker images` and commit SHA. </p>
+
+
+&nbsp;
+
+<img width="1178" height="604" alt="alarm" src="https://github.com/user-attachments/assets/0d26810e-e04d-494a-8123-66ce74e0d4d8" />
+
+<p style="text-align: center;">CloudWatch CPU alarm active at 70% threshold with SNS notification configured. </p>
+
 
 ---
 
