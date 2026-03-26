@@ -1,0 +1,21 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - ec2
+  script:
+    - docker build -t myapp:$CI_COMMIT_SHORT_SHA .
+
+deploy:
+  stage: deploy
+  tags:
+    - ec2
+  script:
+    - docker stop myapp || true
+    - docker rm myapp || true
+    - docker run -d -p 80:3000 --name myapp myapp:$CI_COMMIT_SHORT_SHA
+    - sleep 3
+    - curl -f http://localhost/health || exit 1
