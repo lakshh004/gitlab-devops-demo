@@ -1,4 +1,4 @@
-# 🚀 GitLab DevOps Demo – CI/CD Pipeline on AWS
+# 🚀 CI/CD Pipeline with Self-Hosted GitLab Runner on AWS
 
 [![GitLab CI](https://img.shields.io/badge/GitLab-CI%2FCD-orange)](https://gitlab.com)
 [![Docker](https://img.shields.io/badge/Docker-Containerized-blue)](https://docker.com)
