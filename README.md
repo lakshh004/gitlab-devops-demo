@@ -40,7 +40,11 @@ gitlab-devops-demo/
 ## Architecture Diagram
 
 <img width="1157" height="266" alt="architecture diagram" src="https://github.com/user-attachments/assets/5b6d9083-4960-41e9-bf73-207c90b24106" />
-<p style="text-align: center;">Architecture Diagram</p>
+<p align="center"><strong>Architecture Diagram</strong></p>
+
+<p align="center">
+  <img src="architecture diagram.png" width="800"/>
+</p>
 
 
 ---
