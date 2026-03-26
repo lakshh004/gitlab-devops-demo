@@ -157,7 +157,7 @@ docker run -d -p 80:3000 --name myapp myapp:<commit-sha>
 
 <img width="1470" height="718" alt="start page v2" src="https://github.com/user-attachments/assets/e7f1fd84-525c-46b3-a26b-314635b4ef78" />
 
-<p align="center"><strong>Live app after redeployment — version 2, no downtime.</strong></p>
+<p align="center"><strong>Live app after redeployment - version 2, no downtime.</strong></p>
 
 
 &nbsp;
@@ -171,7 +171,7 @@ docker run -d -p 80:3000 --name myapp myapp:<commit-sha>
 
 <img width="1153" height="628" alt="auto rollback" src="https://github.com/user-attachments/assets/eb7fbe62-96e0-491d-bb3c-4325d764396e" />
 
-<p align="center"><strong>Pipeline log showing automatic rollback after intentional crash — health check failure detected, previous image restored.</strong></p>
+<p align="center"><strong>Pipeline log showing automatic rollback after intentional crash - health check failure detected, previous image restored.</strong></p>
 
 &nbsp;
 
@@ -202,9 +202,9 @@ docker run -d -p 80:3000 --name myapp myapp:<commit-sha>
 
 ## Conclusion
 
-This project pushed me to understand CI/CD not just conceptually but operationally — dealing with Docker permission errors, runner registration issues, health check failures, and rollback logic all taught me more than any tutorial would.
+This project pushed me to understand CI/CD not just conceptually but operationally - dealing with Docker permission errors, runner registration issues, health check failures, and rollback logic all taught me more than any tutorial would.
 
-The part I found most valuable was building the rollback mechanism. It forced me to think about what happens after a deployment, not just during it. A pipeline that deploys successfully is useful — a pipeline that recovers automatically from a bad deploy is closer to how real systems work.
+The part I found most valuable was building the rollback mechanism. It forced me to think about what happens after a deployment, not just during it. A pipeline that deploys successfully is useful - a pipeline that recovers automatically from a bad deploy is closer to how real systems work.
 
 Setting up CloudWatch on top reinforced that deployment and monitoring are two sides of the same responsibility. You don't fully own a deployment until you know how you'll find out when it breaks.
 
