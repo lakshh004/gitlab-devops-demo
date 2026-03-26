@@ -42,11 +42,6 @@ gitlab-devops-demo/
 <img width="1157" height="266" alt="architecture diagram" src="https://github.com/user-attachments/assets/5b6d9083-4960-41e9-bf73-207c90b24106" />
 <p align="center"><strong>Architecture Diagram</strong></p>
 
-<p align="center">
-  <img src="architecture diagram.png" width="800"/>
-</p>
-
-
 ---
 
 ## Architecture Breakdown
@@ -148,49 +143,48 @@ docker run -d -p 80:3000 --name myapp myapp:<commit-sha>
 
 <img width="1167" height="679" alt="build pipeline" src="https://github.com/user-attachments/assets/371f987e-9673-47e2-aa4c-de446f1969cb" />
 
-<p style="text-align: center;">GitLab pipeline passing - build and deploy stages both green.</p>
-
+<p align="center"><strong>GitLab pipeline passing - build and deploy stages both green.</strong></p>
 
 &nbsp;
 
 <img width="1470" height="571" alt="start page v1" src="https://github.com/user-attachments/assets/ce9992d2-4a47-4a4a-a200-016e66566e6d" />
 
-<p style="text-align: center;">Live app in browser - version 1.</p>
+<p align="center"><strong>Live app in browser - version 1.</strong></p>
+
 
 
 &nbsp;
 
 <img width="1470" height="718" alt="start page v2" src="https://github.com/user-attachments/assets/e7f1fd84-525c-46b3-a26b-314635b4ef78" />
 
-<p style="text-align: center;">Live app after redeployment — version 2, no downtime.</p>
+<p align="center"><strong>Live app after redeployment — version 2, no downtime.</strong></p>
 
 
 &nbsp;
 
 <img width="1467" height="443" alt="health status" src="https://github.com/user-attachments/assets/99bfa12e-600e-4b78-944a-9f6bdd637d18" />
 
-<p style="text-align: center;">`/health` endpoint returning `{"status":"healthy"}`.</p>
+<p align="center"><strong>`/health` endpoint returning `{"status":"healthy"}`.</strong></p>
+
 
 &nbsp;
 
 <img width="1153" height="628" alt="auto rollback" src="https://github.com/user-attachments/assets/eb7fbe62-96e0-491d-bb3c-4325d764396e" />
 
-<p style="text-align: center;">Pipeline log showing automatic rollback after intentional crash — health check failure detected, previous image restored.
-</p>
+<p align="center"><strong>Pipeline log showing automatic rollback after intentional crash — health check failure detected, previous image restored.</strong></p>
 
 &nbsp;
 
 <img width="511" height="176" alt="rollback command terminal" src="https://github.com/user-attachments/assets/60e35b41-063b-4217-af96-7d8643948f36" />
 
-<p style="text-align: center;">Manual rollback via `docker images` and commit SHA. </p>
+<p align="center"><strong>Manual rollback via `docker images` and commit SHA.</strong></p>
 
 
 &nbsp;
 
 <img width="1178" height="604" alt="alarm" src="https://github.com/user-attachments/assets/0d26810e-e04d-494a-8123-66ce74e0d4d8" />
 
-<p style="text-align: center;">CloudWatch CPU alarm active at 70% threshold with SNS notification configured. </p>
-
+<p align="center"><strong>CloudWatch CPU alarm active at 70% threshold with SNS notification configured.</strong></p>
 
 ---
 
